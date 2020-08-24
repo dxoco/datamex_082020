@@ -72,7 +72,7 @@ else:
 d_max = d.max()
 d_min = d.min()
 d_mean=d.mean()
-print(f'dmax {d_max}\tdmin {d_min}\tdmean {d_mean}')
+print(f'\ndmax {d_max}\tdmin {d_min}\tdmean {d_mean}')
 
 
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
@@ -80,7 +80,7 @@ f = np.empty([2,3,5])
 
 
 
-.
+
 """
 #16. Populate the values in f. For each value in d, if it's larger than d_min but smaller than d_mean, assign 25 to the corresponding value in fIf a value in d is larger than d_mean but smaller than d_max, assign 75 to the corresponding value in f.
 If a value equals to d_mean, assign 50 to the corresponding value in f.
@@ -89,8 +89,21 @@ Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
+for i in range(0,2):
+    for j in range(0,3):
+        for k in range(0,5):
+            if d[i,j,k] > d_min and d[i,j,k] < d_mean:
+                f[i,j,k] = 25
+            elif d[i,j,k] >d_mean and d[i,j,k] <d_max:
+                f[i,j,k] = 75
+            elif d[i,j,k] == d_mean:
+                f[i,j,k] = 50
+            elif d[i,j,k] == d_min:
+                f[i,j,k] = 0
+            elif d[i,j,k] == d_max:
+                f[i,j,k] = 100
 
-
+print(f'\npopulated f:\n{f}')
 """
 
 #17. Print d and f. Do you have your expected f?
@@ -112,7 +125,7 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
-
+print(f'\nmy d is:\n{d}\nand my f is:\n{f}')
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
