@@ -1,0 +1,58 @@
+## 1. Write down the "big questions" to be asnwered with this project
+    
+    1. What is the "Top 10" of the best paid jobs for a Data Analyst?✔ (Bio-Tech, Real Estate)
+    2. What is the industry sector that that has the better rankings for DA work?✔ (IT)
+    3. Are there any jobs with a remote option? ✔ (yes)
+    4. What is the proportion of entry level vs senior level jobs? ✔ (6.4%)
+    5. If both #4 and #3 return positive results: Is there any job that is junior and remote? ✔ (yes)
+    
+    5. Avoid this:
+        http://online-metrics.com/wp-content/uploads/2016/07/Data-and-Insights.jpg
+    
+        
+## 2. Selecting a dataset
+    
+    The file used in this project was created by picklesueat[1] and is available to download at kaggle[2].
+    As per the abstract reads:
+            "Looking for a job as Data Analyst? Maybe this dataset can help you."
+
+
+        
+## 3. Getting the data in the same dataframe
+    
+    First things first: download data. ✔
+    
+    step 2. load data to the main.ipynb file. ✔    
+    ##learnt something! -> there is a pathlib module[3]
+    ##learnt something! -> sometimes the csv's won't cooperate as expected and data wrangling becomes a bit troublesome.
+    ##learnt something! -> a very easy way of cleaning dataframe columns is with RegEx
+    ##learnt something! -> another way of cleaning is to split into using lists using regex, 
+                    modify by ".insert" and ".pop", and get the obtained panda.Series to a dataframe.
+    ##learnt something! -> split on first ocurrence of pattern [4]
+    ##learnt something! -> when reading a csv, separators can be Regex
+    ##Struggle -> some ideas are more complicated or trickier to implement than others.
+                    Changing from plan A to plan B:
+                        plan A) datasets of Mexican exports 1998-2018.
+                        plan B) Data Analyst Jobs dataset.
+                 
+    step 3. clean data, set appropiate dtypes. ✔
+    ##learnt something! -> If a number can't be converted to integer or returns an OverFloeError,
+                            it's worth trying to convert it to float
+    ##learnt something! -> It's good practice to specify data type as string for columns with letters.
+    
+    step 4. different visualizations have to be used in order to get the more out of the available data. ✔
+    ##learnt something! -> multi graph 
+
+        
+        
+        
+## Data sources
+
+    [1] https://github.com/picklesueat
+    [2] https://www.kaggle.com/andrewmvd/data-analyst-jobs?select=DataAnalyst.csv
+    [3] https://python-forum.io/Thread-Read-all-csv-files-and-store-the-last-line-from-each-folder
+    [4] https://www.kite.com/python/answers/how-to-split-a-string-on-the-first-occurrence-in-python
+    [5] https://www.smartinsights.com/goal-setting-evaluation/web-analytics-strategy/top-10-strategies-turn-data-actionable-analytics/
+    
+    
+    
