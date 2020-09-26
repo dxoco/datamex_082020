@@ -1,0 +1,24 @@
+layer	kaggle	own	stanford
+1	conv	conv	conv
+2	conv	conv	relu
+3	norm		conv
+4	relu		relu
+5	pool	pool	pool
+6	drop	drop	
+	
+7	conv	conv	conv
+8	conv	conv	relu
+9	norm		conv
+10	relu		relu
+11	pool	pool	pool
+12	drop	drop	
+13	flat	flat	
+
+14	dense	dense	conv
+15	dense	dense	relu
+			conv
+			relu
+			pool
+
+			dense
+			dense
